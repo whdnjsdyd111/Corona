@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corona</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+</head>
+<body>
+<div class="menus">
+  <ul>
+    <li><p style="--color: var(--red); --color_bd: var(--red_bd)" id="page_all">전국/시도</p></li>
+    <li><p style="--color: var(--yell); --color_bd: var(--yell_bd)" id="page_ageGender">연령/성별</p></li>
+    <li><p style="--color: var(--gr); --color_bd: var(--gr_bd)" id="page_map">예방/접종</p></li>
+  </ul>
+</div>
+<div class="content">
+  <div class="container">
+    <div class="table">
+      <table>
+        <thead>
+        <th>나이/성별</td>
+        <th>확진자 수</th>
+        <th>확진률</th>
+        <th>사망자 수</th>
+        <th>사망률</th>
+        </thead>
+        <tbody id="tables">
+        <tr>
+          <td>경기</td>
+          <td>641<i>↓ 123</i></td>
+          <td>15<i>↓ 1</i></td>
+          <td>10<i>↓ 123</i></td>
+          <td>100<i>↓ 123</i></td>
+          <td>0.1</td>
+        </tr>
+        <tr>
+          <td>서울</td>
+          <td>117<i>↓ 123</i></td>
+          <td>10<i>↓ 123</i></td>
+          <td>5<i>↓ 123</i></td>
+          <td>115<i>↓ 123</i></td>
+          <td>0.09</td>
+        </tr>
+        <tr>
+          <td>대구</td>
+          <td>50<i>↓ 123</i></td>
+          <td>10<i>↓ 123</i></td>
+          <td>0<i>↓ 123</i></td>
+          <td>11<i>↓ 123</i></td>
+          <td>0.004</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <footer>
+    <h3>ⓒ copyright 조원용</h3>
+    <a href="mailto: whdnjsdyd111@naver.com">whdnjsdyd111@naver.com</a>
+  </footer>
+</div>
+<script>
+  VanillaTilt.init(document.querySelectorAll('ul'), {
+    max: 25,
+    speed: 400,
+    glare: true,
+    "max-glare": 1
+  })
+</script>
+</body>
+</html>

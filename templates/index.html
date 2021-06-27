@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corona</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+</head>
+<body>
+<div class="menus">
+  <ul>
+    <li><p style="--color: var(--red); --color_bd: var(--red_bd)" id="page_all">전국/시도</p></li>
+    <li><p style="--color: var(--yell); --color_bd: var(--yell_bd)" id="page_ageGender">연령/성별</p></li>
+    <li><p style="--color: var(--gr); --color_bd: var(--gr_bd)" id="page_map">예방/접종</p></li>
+  </ul>
+</div>
+<div class="content">
+  <div class="container">
+    <div class="statistics">
+      <div class="title">
+        <h3>누적 확진자</h3>
+        <p>111,111</p>
+        <i>↑ 750</i>
+      </div>
+      <div class="title">
+        <h3>격리 해제</h3>
+        <p>111,111</p>
+        <i>↑ 750</i>
+      </div>
+      <div class="title">
+        <h3>사망자</h3>
+        <p>111,111</p>
+        <i>↑ 750</i>
+      </div>
+    </div>
+    <div class="selects">
+      <div class="select">
+        <select id="do">
+          <option selected>전체보기</option>
+          <option>경기도</option>
+          <option>강원도</option>
+          <option>충청도</option>
+          <option>전라도</option>
+          <option>경상도</option>
+          <option>제주도</option>
+          <option>검역</option>
+        </select>
+      </div>
+      <div class="select">
+        <select id="sido">
+          <option selected>전체보기</option>
+        </select>
+      </div>
+    </div>
+    <div class="result">
+      <div class="circles">
+        <div class="cir_body">
+          <h2 class="s_title">확진률</h2>
+          <svg>
+            <circle cx="100" cy="100" r="100"></circle>
+            <circle id="defRateCir" cx="100" cy="100" r="100" style="--color: #FF3F3F;" class="defCir"></circle>
+          </svg>
+          <p class="cir_num" id="defRate">10%</p>
+        </div>
+        <div class="cir_body">
+          <h2 class="s_title">완치률</h2>
+          <svg>
+            <circle cx="100" cy="100" r="100"></circle>
+            <circle id="cureRateCir" cx="100" cy="100" r="100" style="--color: #00B2FF;" class="cureCir"></circle>
+          </svg>
+          <p class="cir_num" id="cureRate">20.43%</p>
+        </div>
+      </div>
+    </div>
+    <div class="table">
+      <table>
+        <thead>
+        <th>지역</td>
+        <th>확진자 수</th>
+        <th>해외 유입</th>
+        <th>사망자 수</th>
+        <th>격리 중</th>
+        <th>
+          <p>10만명 당</p>
+          <p>발생률</p>
+        </th>
+        </thead>
+        <tbody id="tables">
+        <tr>
+          <td>경기</td>
+          <td>641<i>↓ 123</i></td>
+          <td>15<i>↓ 1</i></td>
+          <td>10<i>↓ 123</i></td>
+          <td>100<i>↓ 123</i></td>
+          <td>0.1</td>
+        </tr>
+        <tr>
+          <td>서울</td>
+          <td>117<i>↓ 123</i></td>
+          <td>10<i>↓ 123</i></td>
+          <td>5<i>↓ 123</i></td>
+          <td>115<i>↓ 123</i></td>
+          <td>0.09</td>
+        </tr>
+        <tr>
+          <td>대구</td>
+          <td>50<i>↓ 123</i></td>
+          <td>10<i>↓ 123</i></td>
+          <td>0<i>↓ 123</i></td>
+          <td>11<i>↓ 123</i></td>
+          <td>0.004</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <footer>
+    <h3>ⓒ copyright 조원용</h3>
+    <a href="mailto: whdnjsdyd111@naver.com">whdnjsdyd111@naver.com</a>
+  </footer>
+</div>
+<script>
+  VanillaTilt.init(document.querySelectorAll('ul'), {
+    max: 25,
+    speed: 400,
+    glare: true,
+    "max-glare": 1
+  })
+</script>
+</body>
+</html>
